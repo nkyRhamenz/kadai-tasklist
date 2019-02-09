@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
+    
+@if (Auth::id() == $user->id)
     <h1>id: {{ $task->id }} のタスク編集ページ</h1>
 
     <div class="row">
@@ -22,5 +23,5 @@
             {!! Form::close() !!}
         </div>
     </div>
-    
+@endif    
 @endsection
